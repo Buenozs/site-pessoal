@@ -1,151 +1,262 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #0d0d0d;
+    font-family: 'Inter', sans-serif;
     color: #f5f5f5;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
 }
 
-/* HEADER */
-.header {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    text-align: center;
-    padding: 60px 20px;
+/* ===== FUNDO COM IMAGEM + SOMBRA ===== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: 
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url("background.png") center/cover no-repeat;
+    z-index: -1;
 }
 
-.header h1 {
+/* ================= NAV ================= */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
     color: #facc15;
-    font-size: 2.5rem;
 }
 
-.header p {
-    margin-top: 10px;
-    color: #d4d4d4;
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 60px;
 }
 
-/* BOTÕES */
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 280px;
+    border-radius: 20px;
+    border: 3px solid #facc15;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ================= BOTÕES ================= */
 .buttons {
-    margin-top: 30px;
+    display: flex;
+    gap: 15px;
 }
 
 .btn {
-    text-decoration: none;
-    padding: 12px 22px;
-    margin: 0 10px;
+    padding: 12px 24px;
     border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.github {
-    background-color: #facc15;
+.primary {
+    background: #facc15;
     color: #000;
 }
 
-.linkedin {
-    background-color: transparent;
-    color: #facc15;
+.outline {
     border: 2px solid #facc15;
+    color: #facc15;
+}
+
+.ghost {
+    border: 1px solid #555;
+    color: #fff;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    opacity: 0.85;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
 }
 
-/* CONTEÚDO */
+/* ================= CONTAINER ================= */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 100px auto;
     padding: 0 20px;
 }
 
+/* ================= CARDS ================= */
 .card {
-    background-color: #1a1a1a;
-    border-left: 5px solid #facc15;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #facc15;
 }
 
 .card h2 {
+    margin-bottom: 20px;
     color: #facc15;
+}
+
+.card h3 {
     margin-bottom: 10px;
 }
 
 .card ul {
     margin-left: 20px;
+    margin-top: 10px;
 }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #888;
-}
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.header,
-.card {
-    animation: fadeUp 0.8s ease forwards;
-}
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.25);
-}
-.btn i {
-    margin-right: 8px;
-    transition: transform 0.3s;
-}
-
-.btn:hover i {
-    transform: rotate(-8deg) scale(1.2);
-}
-.empresa-link {
+/* ================= PROJETOS ================= */
+.project a {
+    display: inline-block;
+    margin-top: 15px;
     color: #facc15;
     text-decoration: none;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    font-weight: 600;
 }
 
-.empresa-link:hover {
+.project a:hover {
     text-decoration: underline;
 }
-.card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s ease forwards;
+
+/* ================= CONTATO ================= */
+.contact-text {
+    margin-bottom: 25px;
+    opacity: 0.8;
 }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
+.contact-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+.contact-item {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    border-color: #facc15;
+    transform: translateY(-3px);
+}
+
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #facc15;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.6);
+    margin-top: 60px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }

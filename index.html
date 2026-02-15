@@ -3,92 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Bueno | Portfólio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <title>Pedro Bueno | Desenvolvedor Web</title>
+
+    <meta name="description" content="Portfólio de Pedro Bueno - Desenvolvedor Web em formação.">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Pedro Bueno</h1>
-        <p>Estudante de Tecnologia | Desenvolvedor em formação</p>
+<!-- ================= NAVBAR ================= -->
+<header class="header">
 
-        <div class="buttons">
-    <a href="https://github.com/Buenozs" target="_blank" class="btn github">
-        <i class="fab fa-github"></i> GitHub
-    </a>
+    <nav class="nav">
+        <h1 class="logo">Pedro Bueno</h1>
 
-    <a href="https://www.linkedin.com/in/pedro-bueno-457b91320/" target="_blank" class="btn linkedin">
-        <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-</div>
+        <ul class="menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-    </header>
+    <!-- ================= HERO ================= -->
+    <div class="hero">
 
-    <main class="container">
-        <section class="card">
-            <h2>Sobre mim</h2>
+        <div class="hero-text">
+            <h2>Desenvolvedor Web em Formação</h2>
             <p>
-                Sou estudante de tecnologia e desenvolvedor em formação, com conhecimentos em
-HTML, CSS, Git, Python e SQL. Atuo como Consultor de Vendas e Suporte de TI,
-unindo tecnologia e atendimento ao cliente. Busco oportunidades para crescer
-na área de TI e desenvolvimento.
-
+                Transformando aprendizado em projetos reais e soluções digitais modernas.
             </p>
-        </section>
 
-        <section class="card">
-    <h2>Experiência Profissional</h2>
+            <div class="buttons">
+                <a href="https://github.com/Buenozs"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn primary">
+                   GitHub
+                </a>
 
-    <p>
-        <strong>Consultor de Vendas e Suporte de TI</strong><br>
+                <a href="https://www.linkedin.com/in/pedro-bueno-457b91320/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn outline">
+                   LinkedIn
+                </a>
 
-        <a href="https://www.madeireirapinhal.com.br" 
-           target="_blank" 
-           class="empresa-link">
-            <i class="fas fa-industry"></i>
-            Madeireira Pinhal
-        </a>
-    </p>
+                <a href="mailto:buenozspe@gmail.com"
+                   class="btn ghost">
+                   Contato
+                </a>
+            </div>
+        </div>
 
-    <ul>
-        <li>Atendimento ao cliente e suporte técnico</li>
-        <li>Suporte básico em TI e sistemas internos</li>
-        <li>Apoio na resolução de problemas técnicos</li>
-        <li>Experiência prática com tecnologia no ambiente corporativo</li>
-    </ul>
-</section>
+        <div class="hero-image">
+            <img src="foto.JPG" alt="Foto de Pedro Bueno">
+        </div>
 
+    </div>
 
+</header>
 
-        <section class="card">
-            <h2>Tecnologias</h2>
-            <ul>
-             <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Git e GitHub</li>
-                <li>Python (básico)</li>
-                <li>Java (básico)</li>
-                <li>MySQL / SQL</li>
+<!-- ================= CONTEÚDO ================= -->
+<main class="container">
 
-            </ul>
-        </section>
+    <!-- SOBRE -->
+    <section id="sobre" class="card">
+        <h2>Sobre mim</h2>
+        <p>
+            Estudante de Tecnologia com foco em Desenvolvimento Web.
+            Possuo conhecimentos em HTML, CSS, Git, Python e SQL.
+            Atuo como Consultor de Vendas e Suporte de TI,
+            unindo tecnologia, resolução de problemas e atendimento estratégico.
+            Busco oportunidades como Desenvolvedor Web Júnior.
+        </p>
+    </section>
 
-        <section class="card">
-            <h2>Projetos</h2>
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="card">
+        <h2>Experiência Profissional</h2>
+
+        <h3>Consultor de Vendas e Suporte de TI</h3>
+        <p>Madeireira Pinhal</p>
+
+        <ul>
+            <li>Atendimento ao cliente e suporte técnico</li>
+            <li>Suporte básico em TI e sistemas internos</li>
+            <li>Resolução de problemas técnicos</li>
+            <li>Experiência prática com tecnologia corporativa</li>
+        </ul>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="card">
+        <h2>Projetos</h2>
+
+        <div class="project">
+            <h3>Portfólio Profissional</h3>
             <p>
-                Este site faz parte do meu portfólio profissional.
-                Novos projetos serão adicionados em breve.
+                Desenvolvido com HTML e CSS com foco em design moderno,
+                responsividade e boas práticas de estruturação.
             </p>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <p>© 2026 - Pedro Bueno</p>
-    </footer>
+            <a href="https://github.com/Buenozs"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver no GitHub
+            </a>
+        </div>
+    </section>
 
+    <!-- CONTATO -->
+    <section id="contato" class="card">
+        <h2>Contato</h2>
+
+        <p class="contact-text">
+            Estou disponível para oportunidades como Desenvolvedor Web Júnior.
+            Entre em contato pelos canais abaixo.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:buenozspe@gmail.com" class="contact-item">
+                📧 Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/pedro-bueno-457b91320/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-item">
+                💼 LinkedIn
+            </a>
+
+            <a href="https://github.com/Buenozs"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-item">
+                💻 GitHub
+            </a>
+
+            <a href="https://wa.me/5512996113303"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-item">
+                📱 WhatsApp
+            </a>
+
+        </div>
+
+        <!-- FORMULÁRIO VISUAL -->
+      <form id="form-contato" class="contact-form">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="email" id="email" placeholder="Seu email" required>
+    <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+    </form>
+
+
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 - Pedro Bueno</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
